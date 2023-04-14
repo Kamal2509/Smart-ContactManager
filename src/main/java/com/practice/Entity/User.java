@@ -1,6 +1,8 @@
 package com.practice.Entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +12,8 @@ public class User {
     @Id
     @GeneratedValue (strategy = GenerationType.AUTO)
     private int id;
+    @NotBlank(message="Name field should not be blank")
+    @Size(min=2,max=20, message="name length should be between 2 and 20")
     private String name;
     private String email;
     private String password;
