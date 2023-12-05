@@ -22,7 +22,7 @@ public class User {
     private String imageUrl;
     private String about;
    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "user")
-    List<Contact> contacts= new ArrayList();
+    List<Contact> contacts= new ArrayList<>();
 
 
     public User() {

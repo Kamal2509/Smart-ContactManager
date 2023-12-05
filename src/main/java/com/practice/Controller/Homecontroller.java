@@ -4,8 +4,12 @@ import com.practice.Entity.User;
 import com.practice.dao.UserRepository;
 import com.practice.helper.message;
 
+import io.micrometer.common.util.internal.logging.Slf4JLoggerFactory;
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class Homecontroller {
+	Logger logger = LoggerFactory.getLogger(Homecontroller.class);
 	@Autowired
 	private UserRepository userRepository;
 

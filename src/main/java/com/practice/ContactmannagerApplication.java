@@ -1,12 +1,7 @@
 package com.practice;
 
-import com.practice.Entity.User;
-import com.practice.dao.UserRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
-
-import javax.naming.Context;
 
 @SpringBootApplication
 public class ContactmannagerApplication {
